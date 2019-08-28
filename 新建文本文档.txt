@@ -1,0 +1,9 @@
+序列化和反序列化
+Ajax的优缺点
+什么是JOSN
+call和apply的区别
+Ajax请求中get和post的区别
+this的指向问题
+window.onload和$(function)的区别
+什么是ajax?
+split和join的区别

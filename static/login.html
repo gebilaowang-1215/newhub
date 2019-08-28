@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://127.0.0.1:3000/login" method="get">
+        用户名：<input type="text" name="username" id="user">
+        密码：<input type="text" name="password" id="pass">
+        <input type="submit" value="提交" id="btn">
+    </form>
+</body>
+<script src="./jquery.js"></script>
+<script>
+    $(function(){
+        $('#btn').click(function(){
+            $.ajax({
+                url:'http://127.0.0.1:3000/login',
+                type:'get',
+                dataType:'json',
+                timeout:2000,
+                async:false,
+                data:{
+                    username:$('#user').val(),
+                    password:$('$pass').val()
+                }
+            }).done(function(result){
+                console.log(result);
+            })
+        })
+    })
+</script>
+</html>
